@@ -99,8 +99,8 @@ function gatewayServiceContent(extras: string[] = []): string {
     "",
     "[Service]",
     "ExecStart=/usr/bin/node /home/user/workspace/openclaw/dist/index.js gateway --port 18790",
-    "Environment=OPENCLAW_SERVICE_MARKER=openclaw",
-    "Environment=OPENCLAW_SERVICE_KIND=gateway",
+    "Environment=OPENCLAW_SERVICE_MARKER=openclaw", // pragma: allowlist secret
+    "Environment=OPENCLAW_SERVICE_KIND=gateway", // pragma: allowlist secret
     ...extras,
     "",
     "[Install]",
